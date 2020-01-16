@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Calculator</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" >
+
+<script type="text/javascript">
+
+function bir(){
+   var r1= document.getElementById("metn");
+   r1.value+="1";
+}
+function iki(){
+   var r1= document.getElementById("metn");
+   r1.value+="2";
+}
+function uc(){
+   var r1= document.getElementById("metn");
+   r1.value+="3";
+}
+function dord(){
+   var r1= document.getElementById("metn");
+   r1.value+="4";
+}
+function bes(){
+   var r1= document.getElementById("metn");
+   r1.value+="5";
+}
+function alti(){
+   var r1= document.getElementById("metn");
+   r1.value+="6";
+}
+function yedi(){
+   var r1= document.getElementById("metn");
+   r1.value+="7";
+}
+function sekiz(){
+   var r1= document.getElementById("metn");
+   r1.value+="8";
+}
+function doquz(){
+   var r1= document.getElementById("metn");
+   r1.value+="9";
+}
+function sifir(){
+   var r1= document.getElementById("metn");
+   r1.value+="0";
+}
+function vergul(){
+   var r1= document.getElementById("metn");
+   r1.value+=".";
+}
+function toplam(){
+   var r1= document.getElementById("metn");
+   r1.value+="+";
+}
+function cixma(){
+   var r1= document.getElementById("metn");
+   r1.value+="-";
+}
+function vurma(){
+   var r1= document.getElementById("metn");
+   r1.value+="*";
+}
+function bolme(){
+   var r1= document.getElementById("metn");
+   r1.value+="/";
+}
+function beraber(){
+   var r1= document.getElementById("metn");
+   var beraber = eval(r1.value);
+ r1.value = beraber;
+}
+function temizle(){
+   var r1= document.getElementById("metn");
+   r1.value="";
+}
+function sqrt(){
+   var r1= document.getElementById("metn");
+   var sqrt = Math.sqrt(r1.value);
+ r1.value = sqrt;
+}
+
+function geri(){
+    var r1 = document.getElementById("metn").value;
+    document.getElementById("metn").value = r1.substr(0, r1.length - 1);
+}
+
+function faiz(){
+   var r1= document.getElementById("metn");
+
+  var beraber = eval(r1.value);
+ r1.value = beraber/100;
+}
+</script>
+<title>Örnek Calculator</title>
+
+<style type="text/css">
+h2{
+  text-align: center;
+  color:red;
+}
+thead{
+  color:darkblue;
+}
+tbody{
+  color:#0c00b1;
+}
+#btn,#btn1,#btn2{
+text-align: center;
+float: center;
+}
+td{
+padding: 0;
+margin: 0 auto;
+}
+input[type=button]{
+  font-size: 20px;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div align="center" id="calc">
+  <h2 >Örnek Calculator</h2>
+  <br>
+  <br>
+  <input type="text"  style="width:500px; height: 50px; text-align: right; border: 1px solid #007bff; padding: 2px; font-size:32px; color:darkblue; " disabled value="" id="metn">
+  <table class="table table-bordered" style="width:500px;">
+
+      <tr>
+        <td align="center"><input type="button" name="btn1" id="btn" value="1" class="col-sm-6 btn btn-primary btn-md" onclick="bir()"></td>
+<td align="center"><input type="button" name="btn2" id="btn2" value="2" class="btn col-sm-6 btn-primary btn-md" onclick="iki()"></td>       
+<td align="center"><input type="button" name="btn3" id="btn3" value="3" class="btn col-sm-6 btn-primary btn-md" onclick="uc()"></td>   
+<td align="center"><input type="button" name="btnt" id="btnt" value="+" class="btn col-sm-6 btn-danger btn-md"  onclick="toplam()"></td>
+<td align="center"><input type="button" name="btnsqrt" id="btnsqrt" value="√" class="btn col-sm-6 btn-danger btn-md"  onclick="sqrt()"></td>       
+
+
+      </tr>
+      <tr>
+        <td align="center"><input type="button" name="btn4" id="btn4" value="4" class="col-sm-6 btn btn-primary btn-md" onclick="dord()" ></td>
+<td align="center"><input type="button" name="btn5" id="btn5" value="5" class="col-sm-6 btn btn-primary btn-md" onclick="bes()"></td>       
+<td align="center"><input type="button" name="btn6" id="btn6" value="6" class="col-sm-6 btn btn-primary btn-md" onclick="alti()"></td>
+<td align="center"><input type="button" name="btnc" id="btnc" value="-" class="btn col-sm-6 btn-danger btn-md"  onclick="cixma()"></td>  <td align="center"><input type="button" name="btnfaiz" id="btnfaiz" value="%" class="btn col-sm-6 btn-danger btn-md"  onclick="faiz()"></td>       
+     
+
+      </tr>
+       <tr>
+        <td align="center"><input type="button" name="btn7" id="btn7" value="7" class="col-sm-6 btn btn-primary btn-md" onclick="yedi()"></td>
+<td align="center"><input type="button" name="btn8" id="btn8" value="8" class="col-sm-6 btn btn-primary btn-md" onclick="sekiz()"></td>       
+<td align="center"><input type="button" name="btn9" id="btn9" value="9" class="col-sm-6 btn btn-primary btn-md" onclick="doquz()"></td>   
+<td align="center"><input type="button" name="btnvur" id="btnvur" value="*" class="btn col-sm-6 btn-danger btn-md"  onclick="vurma()"></td><td align="center"><input type="button" name="btngeri" id="btngeri" value="←" class="btn col-sm-6 btn-info btn-md" onclick="geri()"></td>       
+   
+     
+
+      </tr>
+   <td align="center" ><input type="button" name="btn0" id="btn0" value="0" class="col-sm-6 btn btn-primary btn-md" onclick="sifir()"></td>
+<td align="center"><input type="button" name="btnv" id="btnv" value="." class="col-sm-6 btn btn-primary btn-md" onclick="vergul()"></td>   
+<td align="center"><input type="button" name="btnber" id="btnber" value="=" class="btn col-sm-6 btn-success btn-md" onclick="beraber()"></t>       
+
+<td align="center"><input type="button" name="btnb" id="btnbol" value="/" class="btn col-sm-6 btn-danger btn-md"  onclick="bolme()"></td> 
+<td rowspan="1" align="center"><input type="button" name="btntemiz" id="btntemiz" value="C" class="btn col-sm-6 btn-warning btn-lg"  onclick="temizle()"></td>
+
+  </table>
+</div>
+</div>
+
+<br>
+  <footer>
+    
+    <p style="color:red; font-weight:bold; text-align: center;" >ⒸCreated by Shamo Hasanli</p>
+  </footer>
+ </body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
